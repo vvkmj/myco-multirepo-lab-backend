@@ -38,8 +38,10 @@ def get_status() -> StatusResponse:
             "database": "connected",
             "cache": "connected"
         },
-        uptime_seconds=uptime
+        uptime_seconds=uptime,
+        environment="production"
     )
+
 
 if __name__ == "__main__":
     import uvicorn

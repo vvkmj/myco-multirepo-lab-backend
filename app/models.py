@@ -11,3 +11,5 @@ class StatusResponse(BaseModel):
     status: str = Field(..., description="Operational status: operational, degraded, or offline")
     dependencies: Dict[str, str] = Field(..., description="Status map of downstream dependencies")
     uptime_seconds: int = Field(..., description="Uptime duration in seconds")
+    environment: str = Field(default="production", description="Deployment environment tier")
+
